@@ -144,9 +144,9 @@ object musica {
 object guitarraElectrica {
    //TODO Completar la implementacion de este objeto
    var microfono=gibson
-   var estuche
-   var valor=10000 + microfono.valor()
-   var 
+   var estuche=flexible
+   var valor=10000 
+   var categoria=musica
    
    method cambiarMicrofono(_microfono){
    	microfono=_microfono
@@ -154,13 +154,23 @@ object guitarraElectrica {
    method cambiarEstuche(_estuche){
    	estuche=_estuche
    }
-   method valorGuitarra(){
-   	return valor
+   method valor(){
+   	return valor + microfono.valor()
    }
    
-   method esFragil() = false
+   method esFragil(){
+   	return self.estuche().esFragil()
+   }
 		
-   method categoria() = musica  
+   method categoria(){
+   	return categoria
+   }
+   
+   method estuche(){
+   	return estuche
+   }
+   
+   method microfono()=microfono
  
    
 }
@@ -188,8 +198,11 @@ object diMarzio{
 
 object flexible{
 	
+	method esFragil() = true
+	
 }
 
 object rigido{
 	
+	method esFragil()=false
 }
