@@ -1,3 +1,6 @@
+// CORRECCION: Nota: MB
+// CORRECCION: detalee: agrega variables y métodos innecesarios
+
 /*     Parcialito: Coleccionista
  * 	
  *   Se trata de una aplicación que sirve para que una persona, dueña de una galería de elementos coleccionables
@@ -145,6 +148,9 @@ object guitarraElectrica {
    //TODO Completar la implementacion de este objeto
    var microfono=gibson
    var estuche=flexible
+   
+   //CORRECCION: Estas 2 variables son innecesarias.
+   //CORRECCION: convertirlas a constantes o usar el literal donde se necesite
    var valor=10000 
    var categoria=musica
    
@@ -170,6 +176,7 @@ object guitarraElectrica {
    	return estuche
    }
    
+   //CORRECCION: No es necesario tener este método. No se usa 
    method microfono()=microfono
  
    
